@@ -1,4 +1,4 @@
-FROM jenkins/jenkins AS original
+FROM jenkins/jenkins 
 
 USER 0
 
@@ -20,7 +20,5 @@ RUN apt-get update \
 # Setup users and groups
 RUN addgroup --gid ${DOCKERGID} docker
 RUN usermod -aG docker jenkins
-
-FROM original
 
 USER 1000
