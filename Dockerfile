@@ -21,4 +21,6 @@ RUN apt-get update \
 RUN addgroup --gid ${DOCKERGID} docker
 RUN usermod -aG docker jenkins
 
+RUN IMAGE_VERSION=1
+
 USER 1000
